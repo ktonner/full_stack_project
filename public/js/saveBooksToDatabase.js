@@ -25,7 +25,7 @@ function saveData(event) {
       url: "/api/book",
       data: newBook
     }).then(function () {
-      window.location.href = "./dashboard";
+      window.location.href = "/";
     });
   });
 }
