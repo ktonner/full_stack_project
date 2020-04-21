@@ -13,6 +13,13 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         }
     })
+    User.associate = function(models) {
+        // Associating User with Book
+        // When an User is deleted, also delete any associated Book
+        User.hasMany(models.Book, {
+          onDelete: "cascade"
+        });
+      };
 
     return User;
 }
