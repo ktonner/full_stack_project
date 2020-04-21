@@ -6,7 +6,7 @@ const db = require("../models");
 // i.e: router.get("/", (req, res) => {
 //     //your code here
 // })
-// Route for finding book by title
+//Route for finding book by title
 router.get("/:book", (req,res) => {
     const findBook = db.Book.findOne({where: {title: req.params.book}});
     const { title, author, description } = findBook;
@@ -24,5 +24,19 @@ router.post("/book", (req,res) => {
         res.json(dbBook);
     });
 })
+
+// Get all books
+router.get("/all", function(req, res) {
+
+    // Finding all Books, and then returning them to the user as JSON.
+    // Sequelize queries are asynchronous, which helps with perceived speed.
+    // If we want something to be guaranteed to happen after the query, we'll use
+    // the .then function
+    db.Book.findAll({}).then(function(results) {
+      // results are available to us inside the .then
+      res.json(results);
+    });
+
+  });
 
 module.exports = router;
