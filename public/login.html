@@ -8,7 +8,10 @@
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-float.min.css" integrity="sha256-4ldVyEvC86/kae2IBWw+eJrTiwNEbUUTmN0zkP4luL4=" crossorigin="anonymous">
-        <link rel="style" href="./style/css/app.css">
+<!-- Insert this within your head tag and after foundation.css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+        
+<link rel="style" href="./style/css/app.css">
 
     <title>Auth with Passport</title>
 </head>
@@ -43,7 +46,7 @@
                 <input type="password" class="form-control" id="passwordInput">
             </div>
             <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
-            <small class="form-text text-muted">Not Registered Yet..? <a href="/">Register</a></small>
+            <small class="form-text text-muted">Not Registered Yet..? <a href="/user/register">Register</a></small>
         </form>
     </div>
 </div>
