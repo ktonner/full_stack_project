@@ -15,9 +15,16 @@
     "bcryptjs": "2.4.3",
     "express": "^4.17.0",
     "express-session": "^1.16.1",
+    "foundation-sites": "^6.6.3",
+    "gulp": "^4.0.2",
     "mysql2": "^1.6.5",
+    "node-sass": "^4.13.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "sass": "^1.26.3",
     "sequelize": "^5.8.6"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^7.0.1"
   }
 }
