@@ -13,7 +13,8 @@
                 row.append("Hello")
         //         row.append("<p>" + data[i].title + "</p>");
         //         row.append("<p>" + data[i].author + "</p>");
-                
+        //         row.append ("<p>" + data[i].description + "</p>");   
+        //         row.append ("<p>" + data[i].pages + "</p>");  
                 $("#book").prepend(row);
 
         //     }
