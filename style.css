@@ -1,5 +1,6 @@
 .jumbotron {
     background-color: black;
+    
 
 }
 .display-4{
@@ -20,3 +21,18 @@
   }
 * {box-sizing: border-box}
 
+
+.card{
+    width: 12rem;
+    margin-right: 10px;
+    float: right;
+    background-color: lightgray;
+}
+
+.jumbotron{
+    height: 150px;
+    text-align: center;
+    background-color: lightgray;
+    padding: 20px;
+    background-image: url("weather.png");
+}
