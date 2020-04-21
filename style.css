@@ -1,0 +1,22 @@
+.jumbotron {
+    background-color: black;
+
+}
+.display-4{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* search*/
+.topnav input[type=text] {
+    
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    width: 28%;
+  }
+* {box-sizing: border-box}
+
