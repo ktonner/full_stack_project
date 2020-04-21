@@ -18,3 +18,9 @@ gulp.task('taskname', function(){
           }))
     .pipe(gulp.dest('style'))
 );
+
+gulp.task('import', ()=>
+gulp.src('./src/scss/app.scss')
+  .pipe(sass({
+    includePaths: ['node_modules/motion-ui/src']
+  })))
