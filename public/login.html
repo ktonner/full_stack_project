@@ -24,7 +24,7 @@
   
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="">
+      <a class="navbar-item" href="#">
       
       </a>
 
@@ -38,22 +38,17 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
+        <a href="#" class="navbar-item">
           Home
         </a>
 
-        <a class="navbar-item">
+        <a href="/user/register" class="navbar-item">
           Register
         </a>
-        <a class="navbar-item">
+        <a href="/user/login" class="navbar-item">
           Log In
         </a>
-        <a class="navbar-item">
-          Profile
-        </a>
-        <a class="navbar-item">
-          Dashboard
-        </a>
+        
 
       </div>
     </div>
@@ -67,20 +62,20 @@
           <div class="container">
             <div class="columns is-centered">
               <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-                <form action="" class="box">
+                <form action="" class="box alertAppend">
                   <div class="field">
-                    <label for="" class="label">Email</label>
+                    <label for="emailInput" class="label">Email</label>
                     <div class="control has-icons-left">
-                      <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required>
+                      <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" id="emailInput" required>
                       <span class="icon is-small is-left">
                         <i class="fa fa-envelope"></i>
                       </span>
                     </div>
                   </div>
                   <div class="field">
-                    <label for="" class="label">Password</label>
+                    <label for="passwordInput" class="label">Password</label>
                     <div class="control has-icons-left">
-                      <input type="password" placeholder="*******" class="input" required>
+                      <input type="password" placeholder="*******" class="input" id="passwordInput" required>
                       <span class="icon is-small is-left">
                         <i class="fa fa-lock"></i>
                       </span>
@@ -93,7 +88,7 @@
                     </label>
                   </div>
                   <div class="field">
-                    <button class="button is-success">
+                    <button type="submit" class="button is-success" id="submitBtn">
                       Login
                     </button>
                   </div>
