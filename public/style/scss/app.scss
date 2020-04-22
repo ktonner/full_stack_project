@@ -1,5 +1,23 @@
 @import "settings";
-@import "foundation";
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$company-color: yellow;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+h1{
+    color:$company-color
+}
+
+h2{
+    color:$company-color;
+}
+
+
+// @import "foundation";
 
 // Or selectively include components
 // @import
