@@ -18,9 +18,14 @@ router.get("/:author", (req,res) => {
     const { title, author, description } = findBook;
     res.json({ title, author, description });
 })
-
+// Route for posting(adding) books to database
 router.post("/book", (req,res) => {
-    db.Book.create(req.body).then(function(dbBook) {
+    db.Book.create({
+        title: req.body.title,
+        author: req.body.author,
+        description: req.body.description,
+        pages: req.body.pages
+    }).then(function(dbBook) {
         res.json(dbBook);
     });
 })
