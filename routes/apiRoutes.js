@@ -31,13 +31,17 @@ router.post("/book", (req,res) => {
 })
 
 // Get all books
-router.get("/all", function(req, res) {
+router.get("/all/:id", function(req, res) {
 
     // Finding all Books, and then returning them to the user as JSON.
     // Sequelize queries are asynchronous, which helps with perceived speed.
     // If we want something to be guaranteed to happen after the query, we'll use
     // the .then function
-    db.Book.findAll({}).then(function(results) {
+    db.Book.findAll({
+        where: {
+           UserId: req.params.id
+        }
+    }).then(function(results) {
       // results are available to us inside the .then
       res.json(results);
     });
