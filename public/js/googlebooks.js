@@ -14,10 +14,12 @@ $("#search").on("click", function () {
       for(i = 0; i < response.items.length; i++) {
 
           //individual variable for each book info
+          //JAMES, this is where it can't seem to reach the image or description?
           var element = response.items[i]
           var title = element.volumeInfo.title;
           var author = element.volumeInfo.authors;
-           //var imgURL = response.items[i].volumeInfo.imageLinks.smallThumbnail
+          var desc = element.volumeInfo.description;
+           var imgURL = response.items[i].volumeInfo.imageLinks.smallThumbnail
 
           var card = `
           <div class="card">
@@ -31,6 +33,9 @@ $("#search").on("click", function () {
                   <div class="media-content">
                       <p class="title is-4">${title}</p>
                       <p class="subtitle is-6">${author}</p>
+                      <div class="content>
+                      ${desc}
+                      </div>
                     </div>
           `
           display.append(card)
