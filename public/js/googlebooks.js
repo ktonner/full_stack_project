@@ -35,8 +35,8 @@ $("#search").on("click", function () {
                   <div class="media-content">
                       <p class="title is-4">${title}</p>
                       <p class="subtitle is-6">${author}</p>
-                      <p>${favButton}</p>
-                      <div class="content>
+                      <p><button class="button">Add favorite</button></p>
+                      <div class="content">
                       ${desc} 
                       </div>
                     </div>
