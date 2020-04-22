@@ -19,7 +19,9 @@ $("#search").on("click", function () {
           var title = element.volumeInfo.title;
           var author = element.volumeInfo.authors;
           var desc = element.volumeInfo.description;
-           var imgURL = response.items[i].volumeInfo.imageLinks.smallThumbnail
+          var imgURL = response.items[i].volumeInfo.imageLinks.smallThumbnail;
+          var favButton = $("<button>").text("Add Favorite");
+          favButton.addClass("button");
 
           var card = `
           <div class="card">
@@ -33,14 +35,20 @@ $("#search").on("click", function () {
                   <div class="media-content">
                       <p class="title is-4">${title}</p>
                       <p class="subtitle is-6">${author}</p>
+                      <p>${favButton}</p>
                       <div class="content>
-                      ${desc}
+                      ${desc} 
                       </div>
                     </div>
+                </div>
+            </div>
+          </div>
           `
           display.append(card)
       }
+     
   })
+
 })
       
       // Creating a card div to hold the book
