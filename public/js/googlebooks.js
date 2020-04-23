@@ -19,21 +19,24 @@ $("#search").on("click", function () {
           var title = element.volumeInfo.title;
           var author = element.volumeInfo.authors;
           var desc = element.volumeInfo.description;
+          if(!desc){
+            desc="No description available"
+          }
           var imgURL = response.items[i].volumeInfo.imageLinks.smallThumbnail;
-    
+          var pages = response.items[i].volumeInfo.pageCount;
           var card = `
           <div class="card">
           <div class="card-content">
                 <div class="media">
                   <div class="media-left">
-                    <figure class="image is-48x48">
+                    <figure class="image is-60x60">
                       <img src="${imgURL}" alt="Placeholder image">
                     </figure>
                   </div>
                   <div class="media-content">
                       <p class="title is-4">${title}</p>
                       <p class="subtitle is-6">${author}</p>
-                      <p><button class="button data-title={title} data-author={author}" id="add">Add favorite</button></p>
+                      <p><button class="button" data-title="${title}" data-author="${author}" data-page="${pages}" id="add">Add favorite</button></p>
                       <br>
                       <div class="content">
                       ${desc} 
