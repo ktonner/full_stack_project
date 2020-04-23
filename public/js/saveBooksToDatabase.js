@@ -4,6 +4,8 @@ $(document).on("click","#add", saveData);
 
 function saveData(event) {
   event.preventDefault();
+  //switch button class so not clicked on again
+  $(this).addClass("is-disabled is-link").attr("disabled", "true").html("Favorited")
   // Constructing a newBook object to hand to the database
   var title1 = $(this).attr("data-title");
   var author1 = $(this).attr("data-author");
