@@ -54,6 +54,8 @@ $("#search").on("click", function () {
   })
 
 })
+
+
       
       // Creating a card div to hold the book
       // var bookDiv = $("<div class='book'>");
