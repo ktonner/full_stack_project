@@ -9,7 +9,7 @@
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700">
   
-    <link rel="stylesheet" href="./style/css/app.css">
+    <link rel="stylesheet" href="/public/style/css/app.css">
     <title>Auth with Passport</title>
 
 </head>
@@ -54,15 +54,24 @@
 
 <!--Search-->
     <div class="container">
-        <h3>Search For a Book</h3>
-        <div class="topnav">
-
-            <input id="searchbar" type="text" placeholder="Enter title or author's name">
-            <button id="search" class="button is-info is-medium"><i class="fas fa-search"></i></button>
+       
+<br>
+            <div class="column is-half">
+                <h2>Search For a Book</h2>
+                <br>
+                <div class="level">
+                    <div class="column is-half">
+            <div class="field">
+                <div class="control">
+            <input id="searchbar" class="input" type="text" placeholder="Enter title or author's name">
+                </div>
+            </div>
         </div>
+            <button id="search" class="button is-info is-medium is-pulled-left"><i class="fas fa-search"></i></button>
+            </div>
 
         <!--display for results-->
-        <div class ="column is-full" id="display-case">
+        <div id="display-case">
             
         </div>
         
