@@ -8,7 +8,7 @@ function saveData(event) {
   var author1 = $(this).attr("data-author");
   var description1 = $(this).parent().siblings(".content").text().trim()
   var page1 =  $(this).attr("data-page");
-  // Create newBook object to save
+  // Create Book to save
   var newBook = {
     title: title1,
     author: author1,
