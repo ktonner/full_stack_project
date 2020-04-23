@@ -20,12 +20,7 @@ router.get("/:author", (req,res) => {
 })
 // Route for posting(adding) books to database
 router.post("/book", (req,res) => {
-    db.Book.create({
-        title: req.body.title,
-        author: req.body.author,
-        description: req.body.description,
-        pages: req.body.pages
-    }).then(function(dbBook) {
+    db.Book.create(req.body).then(function(dbBook) {
         res.json(dbBook);
     });
 })
