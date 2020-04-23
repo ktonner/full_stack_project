@@ -1,4 +1,3 @@
-
 $(document).on("click","#add", saveData);
 
 
@@ -11,7 +10,8 @@ function saveData(event) {
   var author1 = $(this).attr("data-author");
   var description1 = $(this).parent().siblings(".content").text().trim()
   var page1 =  $(this).attr("data-page");
-  
+
+  // Create Book to save
   var newBook = {
     title: title1,
     author: author1,
@@ -25,6 +25,15 @@ function saveData(event) {
   }).then(function (user) {
     newBook.UserId = user.id;
     console.log(newBook);
+    //catch for duplicates
+    if(Books.fineOne({
+      where: {
+        title: newBook.title
+      }
+    })){
+      return;
+    }
+    else{
     $.ajax({
       method: "POST",
       url: "/api/book",
@@ -32,5 +41,7 @@ function saveData(event) {
     }).then(function () {
         
     });
+  }
   });
 }
+
