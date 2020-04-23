@@ -30,7 +30,6 @@ $(document).ready(function () {
 
                                 var row = $("<div>");
                                 //row.addClass("book");
-                                row.append("Hello World")
                                 row.append("<p>" + data[i].title + "</p>");
                                 row.append("<p>" + data[i].author + "</p>");
                                 row.append("<p>" + data[i].description + "</p>");

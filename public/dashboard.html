@@ -9,7 +9,7 @@
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700">
   
-    <link rel="style" href="./style/css/app.css">
+    <link rel="stylesheet" href="./style/css/app.css">
     <title>Auth with Passport</title>
 
 </head>
@@ -18,7 +18,7 @@
 
     <!--navbar-->
   
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-info" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
       
@@ -43,6 +43,9 @@
         <a href="/user/login" class="navbar-item">
           Log In
         </a>
+        <a href="/user/profile" class="navbar-item">
+          Profile
+        </a>
       </div>
     </div>
   </nav>
@@ -55,11 +58,11 @@
         <div class="topnav">
 
             <input id="searchbar" type="text" placeholder="Enter title or author's name">
-            <button id="search" class="btn"><i class="fas fa-search"></i></button>
+            <button id="search" class="button is-info is-medium"><i class="fas fa-search"></i></button>
         </div>
 
         <!--display for results-->
-        <div class ="column is-two-fifths" id="display-case">
+        <div class ="column is-full" id="display-case">
             
         </div>
         
