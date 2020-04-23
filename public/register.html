@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700">
-     
+
     <link rel="style" href="./style/css/register.css">
 
     <title>Auth with Passport</title>
@@ -34,20 +34,20 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item">
+                <a href="#" class="navbar-item">
                     Home
                 </a>
 
-                <a class="navbar-item">
+                <a href="/user/register" class="navbar-item">
                     Register
                 </a>
-                <a class="navbar-item">
+                <a href="/user/login" class="navbar-item">
                     Log In
                 </a>
-                <a class="navbar-item">
+                <a href="/user/profile" class="navbar-item">
                     Profile
                 </a>
-                <a class="navbar-item">
+                <a href="/" class="navbar-item">
                     Dashboard
                 </a>
 
@@ -57,18 +57,14 @@
     <!--end of navebar-->
 
     <section class="section hero is-primary is-fullheight">
-        <div class="columns">
+        <div class="columns ">
             <div class="column is-4 is-offset-4">
+                <form class="alertAppendReg">
                 <div class="field">
-                    <label class="label">Name</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Your Name">
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label">Username</label>
+                    <label for="emailInputReg" class="label">Email address</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input is-success" type="text" placeholder="Text input" value="Username">
+                        <input class="input is-success" type="email" id="emailInputReg"
+                            placeholder="Enter your email address">
                         <span class="icon is-small is-left">
                             <i class="fa fa-user"></i>
                         </span>
@@ -76,13 +72,13 @@
                             <i class="fa fa-check"></i>
                         </span>
                     </div>
-                    <p class="help is-success">This username is available</p>
                 </div>
                 <div class="field">
-                    <label class="label">Email</label>
+                    <label for="passwordInputReg" class="label">Your password</label>
                     <div class="control has-icons-left has-icons-right">
-                
-                        <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required>
+
+                        <input type="password" placeholder="Enter your password" id="passwordInputReg" class="input"
+                            required>
                         <span class="icon is-small is-left">
                             <i class="fa fa-envelope"></i>
                         </span>
@@ -90,34 +86,33 @@
                             <i class="fa fa-check"></i>
                         </span>
                     </div>
-                    <p class="help is-success">This Email is available</p>
+
+                </div>
+                <div class="field">
+                    <label for="passwordTwoInputReg" class="label">Confirm your password</label>
+                    <div class="control has-icons-left has-icons-right">
+
+                        <input type="password" placeholder="Enter your password" id="passwordTwoInputReg" class="input"
+                            required>
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fa fa-check"></i>
+                        </span>
+                    </div>
+
                 </div>
 
-                <div class="field">
-                    <label class="label">Gender</label>
-                    <div class="control">
-                        <div class="select">
-                            <select>
-                                <option>Select</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="control">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                    </div>
-                </div>
+
                 <div class="field is-grouped">
                     <div class="control">
-                        <button class="button is-link">Submit</button>
+                        <small>Already Registered..? <a href="/user/login">Log In</a></small><br><br>
+                        <button id="submitBtnReg" class="button is-link" type="submit">Submit</button>
+
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </section>
