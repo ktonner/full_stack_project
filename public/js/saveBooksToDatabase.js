@@ -30,12 +30,11 @@ function saveData(event) {
       data: newBook
     }).then(function (data){
       console.log(data)
-      var row = $("<div>");
+      var row = $("<div class='card'>");
       //row.addClass("book");
-      row.append("<p>" + data.title + "</p>");
-      row.append("<p>" + data.author + "</p>");
-      row.append("<p>" + data.description + "</p>");
-      row.append("<p>" + data.pages + "</p>");
+      row.append("<p class='title is-4'>" + data.title + "</p>");
+      row.append("<p class='subtitle is-6'>" + data.author + "</p>");
+      row.append("<p class='content'>" + "Pages: " + data.pages + "</p>");
       $("#display-favorites").append(row);
       console.log("made it this far")
     })
