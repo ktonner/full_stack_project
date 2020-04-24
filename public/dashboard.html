@@ -50,11 +50,14 @@
   <div class="container">
 
     <br>
-    <div class="column is-half">
+
+
+    <div class="column is-half is-pulled-left">
       <h2>Search For a Book</h2>
       <br>
       <div class="level">
-        <div class="column is-half">
+        <div class="column is-half level-left">
+
           <div class="field">
             <div class="control">
               <input id="searchbar" class="input" type="text" placeholder="Enter title or author's name">
@@ -63,13 +66,20 @@
         </div>
         <button id="search" class="button is-info is-medium is-pulled-left"><i class="fas fa-search"></i></button>
       </div>
-
-      <!--display for results-->
+    <!--display for results-->
       <div id="display-case">
-      </div>
 
+      </div>
     </div>
-    <!--second section of the tabs vertical -->
+
+    <!--display for favorites-->
+
+      <div id="display-favorites" class="column is-half is-pulled-left">
+          <h2>Hello</h2>
+        
+      </div>
+    </div>
+    <!--second section of the tabs vertical-->
     <div class="container">
       <div class="col-md-9">
         <div class="row">
@@ -81,12 +91,12 @@
   </div>
   </div>
 
-
   <script src="https://code.jquery.com/jquery-3.5.0.min.js"
     integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="./js/user.js"></script>
   <script type="text/javascript" src="./js/saveBooksToDatabase.js"></script>
   <script type="text/javascript" src="./js/googlebooks.js"></script>
+  <script type="text/javascript" src="./js/createFavoritesDashboard.js"></script>
 </body>
 
 </html>
