@@ -32,9 +32,11 @@ function saveData(event) {
       console.log(data)
       var row = $("<div class='card'>");
       //row.addClass("book");
-      row.append("<p class='title is-4'>" + data.title + "</p>");
-      row.append("<p class='subtitle is-6'>" + data.author + "</p>");
-      row.append("<p class='content'>" + "Pages: " + data.pages + "</p>");
+      
+      row.append("<p class='card-header-title' style='font-size: 30px; margin-left: 15px;'>" + data.title + "</p>");
+      row.append("<p class='author-content' style='color: hotpink; margin-left: 30px; font-weight: bold;'>" + data.author + "</p>" + "<br>");
+      row.append("<p class='content' style='font-size: 12px; margin-left: 30px;'>Number of pages: " + data.pages + "</p>" + "<hr>");
+      
       $("#display-favorites").append(row);
       console.log("made it this far")
     })
