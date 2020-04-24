@@ -1,7 +1,5 @@
 
 $(document).on("click","#add", saveData);
-
-
 function saveData(event) {
   event.preventDefault();
   //switch button class so not clicked on again
