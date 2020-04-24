@@ -24,22 +24,19 @@ function saveData(event) {
     newBook.UserId = user.id;
     console.log(newBook);
     //catch for duplicates
-    if(Books.fineOne({
-      where: {
-        title: newBook.title
-      }
-    })){
-      return;
-    }
-    else{
     $.ajax({
       method: "POST",
       url: "/api/book",
       data: newBook
-    }).then(function () {
-        
-    });
-  }
-  });
-}
-
+    }).then(function (data){
+      console.log(data)
+      var row = $("<div>");
+      //row.addClass("book");
+      row.append("<p>" + data.title + "</p>");
+      row.append("<p>" + data.author + "</p>");
+      row.append("<p>" + data.description + "</p>");
+      row.append("<p>" + data.pages + "</p>");
+      $("#display-favorites").append(row);
+      console.log("made it this far")
+    })
+  })}
