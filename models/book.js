@@ -1,4 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
+    //Create a Book model
     var Book = sequelize.define("Book", {
         title: {
             type: DataTypes.STRING,
@@ -27,6 +28,7 @@ module.exports = function (sequelize, DataTypes) {
         }
         
     })
+    // Add a foreign key to Book table
     Book.associate = function(models) {
         // We're saying that a Book should belong to a User
         // A Book can't be created without a User due to the foreign key constraint

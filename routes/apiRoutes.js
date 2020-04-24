@@ -1,11 +1,5 @@
 const router = require("express").Router();
 const db = require("../models");
-// you this file to code your API routes
-
-// route: /api
-// i.e: router.get("/", (req, res) => {
-//     //your code here
-// })
 //Route for finding book by title
 router.get("/:book", (req,res) => {
     const findBook = db.Book.findOne({where: {title: req.params.book}});
