@@ -95,7 +95,7 @@ $("#add").on("click", function () {
 )
 
 
-$(document).on("click","#add", function(){
+//$(document).on("click","#add", function(){
 
 // //get user ID
 // $.ajax({
