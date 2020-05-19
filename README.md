@@ -9,6 +9,10 @@ This full stack application is deployed on Heroku.
 We use Heroku's Jawsdb for database.
 ## Steps
 Our first step was to find an API to get data for the app. Once we found Google Books API, we had to get data on our page for when members log in and search for books. We, then, used POST method to save books data to database when users want to add books to their profile list. We had to use GET method to retrieve data from database and put it on the profile page.
+
+## Link
+http://booklogger123.herokuapp.com/
+
 ## Authors
 * Yoom Davidson
 * Nardine George
