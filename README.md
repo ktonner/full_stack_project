@@ -12,6 +12,7 @@ Our first step was to find an API to get data for the app. Once we found Google 
 
 ## Link
 http://booklogger123.herokuapp.com/
+login with blu@gmail.com, password: blabla
 
 ## Authors
 * Yoom Davidson
